@@ -17,6 +17,10 @@ def search_obra(request):
 
     return render(request,'search_obra.html')
 
+def listado_obras(request)
+    
+    return render(request,'listado_obras.html')
+
 def buscar(request):
     #respuesta = f"Estoy buscando la obra nro: {request.GET['nrocliente']}"
 
