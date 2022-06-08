@@ -20,8 +20,8 @@ def search_obra(request):
 def buscar(request):
     #respuesta = f"Estoy buscando la obra nro: {request.GET['nrocliente']}"
 
-    if request.GET["nrocliente"]:
-        nrocliente = request.GET["nrocliente"]
+    if request.GET['nrocliente']:
+        nrocliente = request.GET['nrocliente']
         nombre = Obra.objects.filter(nrocliente__icontains=nrocliente)
         return render(request,'resultadosbusqueda.html', {"nrocliente":nrocliente, "nombre":nombre})
     else:
