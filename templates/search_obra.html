@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block contenidoQueCambia %}
+
+A continuación podemos ver el listado de obras de la empresa: 
+
+{% for obras in object_list %}
+    {{obra.cliente}}
+    {{obra.nrocliente}}
+    {{obra.nombre}}
+    {{obra.fecha}}
+{% endfor %}
+
+{% endblock %}
