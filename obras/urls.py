@@ -1,10 +1,10 @@
 from django.urls import path
-from obras.views import create_obra
+from obras.views import crear_obra
 
 
 
 
 urlpatterns = [
-    path('create-obra/', create_obra, name='create-obra'),
+    path('crear-obra/', crear_obra, name='crear-obra'),
     
     ]
