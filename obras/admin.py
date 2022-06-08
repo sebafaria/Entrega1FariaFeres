@@ -4,5 +4,3 @@ from obras.models import Obra
 # Register your models here.
 
 admin.site.register(Obra)
-
-"es una prueba"
