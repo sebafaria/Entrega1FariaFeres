@@ -1,8 +1,6 @@
 from django.shortcuts import render
 from obras.models import Obra
-
-
-
+from obras.forms import Obra_form
 
 def crear_obra(request):
     return render(request, 'crear_obra.html')
