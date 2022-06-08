@@ -7,6 +7,25 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Aca se agregan las obras, clientes y empleados</h1>
+{% if form %}
+<h1>Aca se agregan las obras</h1>
+
+<form mehotd="POST" action="">
+    {% csrf_token %}
+ <table>     
+{{form}}
+</table>
+<input type="submit", value="Enviar">
+</form>   
+{% elif new_obra %}
+
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">{{new_obra.name}}</h5>
+        <p class="card-text">{{new_obra.description}}</p>
+        <p class="card-text">{{new_obra.price}}</p>
+    </div>
+</div>
+{% endif %}
 </body>
 </html>

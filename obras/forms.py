@@ -7,5 +7,7 @@ from obras.models import Obra
 #        fields = '__all__'
 
 class Obra_form(forms.Form):
-    nrocliente=forms.FloatField()
-    nombre=forms.CharField()
+    cliente = forms.CharField(max_length=100)
+    nrocliente = forms.FloatField()
+    nombre = forms.CharField(max_length=100)
+    fecha = forms.DateField()
