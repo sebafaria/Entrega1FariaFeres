@@ -1,7 +1,14 @@
-<form action="buscar/" method="GET">
+{% extends 'base.html' %}
 
-    <input type="number" nombre="nrocliente" id="nrocliente">
+{% block contenidoQueCambia %}
+
+<form action="/obras/resultadosbusqueda/" method="GET">
+
+    <input type="text" name="search" aria-label="Search">
+
     <input type="submit" value="Buscar">
 
-</form> 
+</form>
+
+{% endblock %}
 

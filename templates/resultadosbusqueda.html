@@ -1,14 +1,13 @@
-<p>Estamos buscando el: {{nrocliente}}</p>
+{% extends 'base.html' %}
 
-{% if cursos %}
+{% block contenidoQueCambia %}
 
-<ul>
-
-{% for obra in obras %}
-    <li> {{obra.nombre}}</li>
-    <li> {{obra.nrocliente}}</li>
-{% endfor %}
-
-</ul>
-
+{% if obras %}
+    {% for obra in obras %}
+        <h5>{{obra.cliente}}</h5>
+        <p>{{obra.nrocliente}}</p>
+        <p>{{obra.nombre}}</p>
+    {% endfor %}
 {% endif %}
+
+{% endblock %}
