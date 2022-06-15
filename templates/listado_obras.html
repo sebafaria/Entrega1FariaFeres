@@ -4,11 +4,11 @@
 
 A continuación podemos ver el listado de obras de la empresa: 
 
-{% for obras in lista_obras %}
-    {{obra.cliente}}
-    {{obra.nrocliente}}
-    {{obra.nombre}}
-    {{obra.fecha}}
+{% for obras in listado_obras %}
+    {{obras.cliente}}
+    {{obras.nrocliente}}
+    {{obras.nombre}}
+    {{obras.fecha}}
 {% endfor %}
 
 {% endblock %}

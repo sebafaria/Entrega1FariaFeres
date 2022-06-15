@@ -4,7 +4,6 @@ from obras.forms import Obra_form
 from django.http import HttpResponse
 from django.views.generic import ListView
 
-
 def crear_obra(request):
     if request.method == 'GET':
         form = Obra_form()
@@ -19,8 +18,8 @@ def crear_obra(request):
                 nombre = form.cleaned_data [' nombre '],
                 fecha = form.cleaned_data [' fecha '],
             )
-            context = {'new_obra':new_obra}
-        return render(request, 'crear_obra.html', context = context) 
+            contexto = {'new_obra':new_obra}
+        return render(request, 'crear_obra.html', context = contexto) 
 #def search_obra(request):
 #    obra = Obra.objects.filter(name__icontains=request.GET['search'])
 #    if obra.exists():
@@ -35,8 +34,8 @@ def search_obra(request):
 
 def listar_obras(request):
     lista_obras = Obra.objects.all()
-    context = {'listado_obras':lista_obras}
-    return render(request,'listado_obras.html', context=context)
+    contextoo = {'listado_obras':lista_obras}
+    return render(request,'listado_obras.html', context=contextoo)
 
 def buscar(request):
     #respuesta = f"Estoy buscando la obra nro: {request.GET['nrocliente']}"

@@ -8,6 +8,10 @@ class Obra(models.Model):
     nombre = models.CharField(max_length=100)
     fecha = models.DateField(default=now)
 
+
+    def __str__(self):
+        return f"Cliente: {self.cliente} - Numero de cliente {self.nrocliente} - Obra: {self.nombre} - Fecha: {self.fecha}"
+
 class Clientes(models.Model):
     nombrecliente = models.CharField(max_length=100)
     direccionfiscal = models.CharField(max_length=100)
